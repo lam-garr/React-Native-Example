@@ -1,5 +1,7 @@
 import React from "react";
-import { ImageBackground, StyleSheet, View, Image } from "react-native";
+import { useState } from "react";
+import { ImageBackground, StyleSheet, View, Image, ScrollView } from "react-native";
+import { Stack, useRouter } from "expo-router";
 
 function WelcomeScreen() {
     return(
