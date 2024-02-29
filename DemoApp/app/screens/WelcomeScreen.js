@@ -1,13 +1,15 @@
 import React from "react";
-import { useState } from "react";
-import { ImageBackground, StyleSheet, View, Image, ScrollView } from "react-native";
+import { ImageBackground, StyleSheet, View, Image, ScrollView, Button } from "react-native";
 import { Stack, useRouter } from "expo-router";
+import { useNavigation } from "@react-navigation/native";
 
-function WelcomeScreen() {
+function WelcomeScreen({ navigation }) {
+    const navigation = useNavigation();
     return(
         <ImageBackground style={styles.background}>
             <Image/>
             <View style={styles.welcomeButton}></View>
+            <Button title="About" onPress={() => navigation.navigate("About")}/>
         </ImageBackground>
     );
 }
