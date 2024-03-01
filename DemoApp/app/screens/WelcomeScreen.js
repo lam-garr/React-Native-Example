@@ -9,7 +9,7 @@ function WelcomeScreen({ navigation }) {
         <ImageBackground style={styles.background}>
             <Image/>
             <View style={styles.welcomeButton}></View>
-            <Button title="About" onPress={() => navigation.navigate("About")}/>
+            <Button title="About" onPress={() => navigation.navigate("About", {name:"User"})}/>
         </ImageBackground>
     );
 }
