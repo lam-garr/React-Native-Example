@@ -8,6 +8,9 @@ function ContentScreen({ route, navigation }) {
     return(
         <SafeAreaView style={styles.background}>
             <Text style={styles.text}>Hello {name}</Text>
+            <Button style={styles.button} title="Update" onPress={() => navigation.setParams({
+                name:"Updated Content User"
+            })}/>
             <Button title="Return with data" onPress={() => navigation.navigate(
                 "Home",
                 {result: "Data from Content"}
