@@ -11,6 +11,7 @@ function WelcomeScreen({ navigation, route }) {
             <View style={styles.welcomeButton}></View>
             <Button title="About" onPress={() => navigation.navigate("About", {name:"User"})}/>
             <Button title="Support" onPress={() => navigation.navigate("Support", {name:"User"})}/>
+            <Button title="Login" onPress={() => navigation.navigate("Login", {name:"User"})}/>
             <Text style={styles.paramsText}>{route.params?.result}</Text>
         </ImageBackground>
     );
