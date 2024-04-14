@@ -8,6 +8,9 @@ function LoginScreen({ route, navigation }) {
     return(
         <SafeAreaView style={styles.background}>
             <Text style={styles.text}>Log In, {name}</Text>
+            <Button style={styles.button} title="Update" onPress={() => navigation.setParams({
+                name:"Updated Login User"
+            })}/>
             <Button title="Return with data" onPress={() => navigation.navigate(
                 "Home",
                 {result: "Data from Login"}
