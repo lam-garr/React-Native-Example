@@ -1,9 +1,13 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
 
-function SignupScreen() {
+function SignupScreen({ route }) {
+
+    const { name } = route.params;
+
     return(
         <SafeAreaView style={styles.background}>
+            <Text style={styles.text}>Sign Up, {name}</Text>
         </SafeAreaView>
     );
 }
@@ -12,6 +16,9 @@ const styles = StyleSheet.Create({
     background: {
         flex: 1,
         backgroundColor: "white"
+    },
+    text:{
+        color: "black"
     }
 })
 
