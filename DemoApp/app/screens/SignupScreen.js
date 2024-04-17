@@ -8,6 +8,9 @@ function SignupScreen({ route, navigation }) {
     return(
         <SafeAreaView style={styles.background}>
             <Text style={styles.text}>Sign Up, {name}</Text>
+            <Button style={styles.button} title="Update" onPress={() => navigation.setParams({
+                name:"Updated User"
+            })}/>
             <Button title="Return with data" onPress={() => navigation.navigate(
                 "Home",
                 {result: "Data from Signup"}
