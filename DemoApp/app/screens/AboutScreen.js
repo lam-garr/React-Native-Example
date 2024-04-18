@@ -25,10 +25,10 @@ const styles = StyleSheet.Create({
         backgroundColor: "white"
     },
     text:{
-        color: black
+        color: "black"
     },
     button: {
-        color: black
+        color: "black"
     }
 })
 
