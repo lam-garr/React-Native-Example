@@ -23,6 +23,12 @@ const styles = StyleSheet.Create({
     background: {
         flex: 1,
         backgroundColor: "white"
+    },
+    text:{
+        color: "black"
+    },
+    button: {
+        color: "black"
     }
 })
 
