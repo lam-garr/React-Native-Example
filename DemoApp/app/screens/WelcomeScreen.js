@@ -9,12 +9,12 @@ function WelcomeScreen({ navigation, route }) {
         <ImageBackground style={styles.background}>
             <Image/>
             <View style={styles.welcomeButton}></View>
-            <Button title="About" onPress={() => navigation.navigate("About", {name:"User"})}/>
-            <Button title="Support" onPress={() => navigation.navigate("Support", {name:"User"})}/>
-            <Button title="Login" onPress={() => navigation.navigate("Login", {name:"User"})}/>
-            <Button title="Signup" onPress={() => navigation.navigate("Signup", {name:"User"})}/>
-            <Button title="Content" onPress={() => navigation.navigate("Content", {name:"User"})}/>
-            <Button title="Profile" onPress={() => navigation.navigate("Profile", {name:"User"})}/>
+            <Button style={styles.button} title="About" onPress={() => navigation.navigate("About", {name:"User"})}/>
+            <Button style={styles.button} title="Support" onPress={() => navigation.navigate("Support", {name:"User"})}/>
+            <Button style={styles.button} title="Login" onPress={() => navigation.navigate("Login", {name:"User"})}/>
+            <Button style={styles.button} title="Signup" onPress={() => navigation.navigate("Signup", {name:"User"})}/>
+            <Button style={styles.button} title="Content" onPress={() => navigation.navigate("Content", {name:"User"})}/>
+            <Button style={styles.button} title="Profile" onPress={() => navigation.navigate("Profile", {name:"User"})}/>
             <Text style={styles.paramsText}>{route.params?.result}</Text>
         </ImageBackground>
     );
@@ -32,6 +32,9 @@ const styles = StyleSheet.Create({
     },
     paramsText: {
         color: "black"
+    },
+    button: {
+        color: "green"
     }
 })
 
