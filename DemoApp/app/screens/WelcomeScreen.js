@@ -11,7 +11,7 @@ function WelcomeScreen({ navigation, route }) {
             <View style={styles.welcomeButton}></View>
             <Button style={styles.aboutButton} title="About" onPress={() => navigation.navigate("About", {name:"User"})}/>
             <Button style={styles.supportButton} title="Support" onPress={() => navigation.navigate("Support", {name:"User"})}/>
-            <Button style={styles.button} title="Login" onPress={() => navigation.navigate("Login", {name:"User"})}/>
+            <Button style={styles.loginButton} title="Login" onPress={() => navigation.navigate("Login", {name:"User"})}/>
             <Button style={styles.button} title="Signup" onPress={() => navigation.navigate("Signup", {name:"User"})}/>
             <Button style={styles.button} title="Content" onPress={() => navigation.navigate("Content", {name:"User"})}/>
             <Button style={styles.button} title="Profile" onPress={() => navigation.navigate("Profile", {name:"User"})}/>
@@ -43,6 +43,10 @@ const styles = StyleSheet.Create({
     supportButton: {
         color: "black",
         backgrounColor: "yellow"
+    },
+    loginButton: {
+        color: "black",
+        backgrounColor: "green"
     }
 })
 
