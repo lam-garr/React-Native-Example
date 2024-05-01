@@ -12,7 +12,7 @@ function WelcomeScreen({ navigation, route }) {
             <Button style={styles.aboutButton} title="About" onPress={() => navigation.navigate("About", {name:"User"})}/>
             <Button style={styles.supportButton} title="Support" onPress={() => navigation.navigate("Support", {name:"User"})}/>
             <Button style={styles.loginButton} title="Login" onPress={() => navigation.navigate("Login", {name:"User"})}/>
-            <Button style={styles.button} title="Signup" onPress={() => navigation.navigate("Signup", {name:"User"})}/>
+            <Button style={styles.signupButton} title="Signup" onPress={() => navigation.navigate("Signup", {name:"User"})}/>
             <Button style={styles.button} title="Content" onPress={() => navigation.navigate("Content", {name:"User"})}/>
             <Button style={styles.button} title="Profile" onPress={() => navigation.navigate("Profile", {name:"User"})}/>
             <Text style={styles.paramsText}>{route.params?.result}</Text>
@@ -47,6 +47,10 @@ const styles = StyleSheet.Create({
     loginButton: {
         color: "black",
         backgrounColor: "green"
+    },
+    signupButton: {
+        color: "white",
+        backgrounColor: "blue"
     }
 })
 
