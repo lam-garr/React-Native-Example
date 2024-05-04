@@ -23,12 +23,13 @@ function WelcomeScreen({ navigation, route }) {
 const styles = StyleSheet.Create({
     background: {
         flex: 1,
+        backgroundColor: "plum",
         justifyContent: "flex-end"
     },
     welomeButton: {
         width: "95%",
         height: 70,
-        backgrounColor: "pink"
+        backgroundColor: "pink"
     },
     paramsText: {
         color: "black"
@@ -38,19 +39,19 @@ const styles = StyleSheet.Create({
     },
     aboutButton: {
         color: "grey",
-        backgrounColor: "beige"
+        backgroundColor: "beige"
     },
     supportButton: {
         color: "black",
-        backgrounColor: "yellow"
+        backgroundColor: "yellow"
     },
     loginButton: {
         color: "black",
-        backgrounColor: "green"
+        backgroundColor: "green"
     },
     signupButton: {
         color: "white",
-        backgrounColor: "blue"
+        backgroundColor: "blue"
     },
     contentButton: {
         color: "grey",
