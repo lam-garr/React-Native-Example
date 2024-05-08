@@ -7,7 +7,7 @@ function WelcomeScreen({ navigation, route }) {
     const navigation = useNavigation();
     return(
         <ImageBackground style={styles.background}>
-            <Image/>
+            <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
             <View style={styles.welcomeButton}></View>
             <Button style={styles.aboutButton} title="About" onPress={() => navigation.navigate("About", {name:"User"})}/>
             <Button style={styles.supportButton} title="Support" onPress={() => navigation.navigate("Support", {name:"User"})}/>
@@ -60,6 +60,9 @@ const styles = StyleSheet.Create({
     profileButton: {
         color: "grey",
         backgroundColor: "green"
+    }, contentImage: {
+        width: 300,
+        height: 300,
     }
 })
 
