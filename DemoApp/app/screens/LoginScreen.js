@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView } from "react-native";
+import { SafeAreaView, Text, Button, Image } from "react-native";
 
 function LoginScreen({ route, navigation }) {
 
@@ -8,6 +8,7 @@ function LoginScreen({ route, navigation }) {
     return(
         <SafeAreaView style={styles.background}>
             <Text style={styles.text}>Log In, {name}</Text>
+            <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
             <Button style={styles.button} title="Update" onPress={() => navigation.setParams({
                 name:"Updated Login User"
             })}/>
@@ -29,6 +30,10 @@ const styles = StyleSheet.Create({
     },
     button: {
         color: "black"
+    },
+    contentImage: {
+        width: 300,
+        height: 300,
     }
 })
 
