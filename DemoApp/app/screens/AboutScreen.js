@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text } from "react-native";
+import { SafeAreaView, Text, Button, ScrollView } from "react-native";
 
 function AboutScreen({ route, navigation }) {
 
@@ -7,14 +7,16 @@ function AboutScreen({ route, navigation }) {
 
     return(
         <SafeAreaView style={styles.background}>
-            <Text style={styles.text}>Hello {name}</Text>
-            <Button style={styles.button} title="Update" onPress={() => navigation.setParams({
-                name:"Updated User"
-            })}/>
-            <Button title="Return with data" onPress={() => navigation.navigate(
-                "Home",
-                {result: "Data from About"}
-            )}/>
+            <ScrollView>
+                <Text style={styles.text}>Hello {name}</Text>
+                <Button style={styles.button} title="Update" onPress={() => navigation.setParams({
+                    name:"Updated User"
+                })}/>
+                <Button title="Return with data" onPress={() => navigation.navigate(
+                    "Home",
+                    {result: "Data from About"}
+                )}/>
+            </ScrollView>
         </SafeAreaView>
     );
 }
