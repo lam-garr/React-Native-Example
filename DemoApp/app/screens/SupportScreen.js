@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button, Image } from "react-native";
+import { SafeAreaView, Text, Button, Image, ScrollView } from "react-native";
 
 function SupportScreen({ route, navigation }) {
 
@@ -7,15 +7,17 @@ function SupportScreen({ route, navigation }) {
 
     return(
         <SafeAreaView style={styles.background}>
-            <Text style={styles.text}>Hello {name}</Text>
-            <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
-            <Button style={styles.button} title="Update" onPress={() => navigation.setParams({
-                name:"Updated Support User"
-            })}/>
-            <Button title="Return with data" onPress={() => navigation.navigate(
-                "Home",
-                {result: "Data from Support"}
+            <ScrollView>
+                <Text style={styles.text}>Hello {name}</Text>
+                <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
+                <Button style={styles.button} title="Update" onPress={() => navigation.setParams({
+                    name:"Updated Support User"
+                })}/>
+                <Button title="Return with data" onPress={() => navigation.navigate(
+                    "Home",
+                    {result: "Data from Support"}
             )}/>
+            </ScrollView>
         </SafeAreaView>
     );
 }
