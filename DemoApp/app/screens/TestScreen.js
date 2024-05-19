@@ -1,7 +1,11 @@
 import React from "react";
-import { View, Button, ScrollView, Image, Pressable } from "react-native";
+import { useState } from "react";
+import { View, Button, ScrollView, Image, Pressable, Text, Modal } from "react-native";
 
 function TestScreen() {
+
+    const [ modalIsVisible, setModalIsVisible ] = useState(false);
+
     return(
         <View style={{flex:1, backgroundColor: "plum", padding: 60}}>
             <ScrollView>
@@ -10,9 +14,24 @@ function TestScreen() {
                 </Pressable>
                 <Button
                     title="Press Test Button"
-                    onPress={() => console.log("Test Button Pressed")}
+                    onPress={() => setModalIsVisible(true)}
                     color="midnightblue"
                 />
+                <Modal 
+                    visible={modalIsVisible} 
+                    onRequestClose={() => setModalIsVisible(false)}
+                    animationType="slide"
+                    presentationStyle="pageSheet"
+                >
+                    <View style={{flex:1, backgroundColor: "yellow", padding: 60}}>
+                        <Text>Modal Content</Text>
+                        <Button
+                            title="Close Modal"
+                            onPress={() => setModalIsVisible(false)}
+                            color="midnightblue"
+                        />
+                    </View>
+                </Modal>
             </ScrollView>
         </View>
     );
