@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button ,Image, ScrollView } from "react-native";
+import { SafeAreaView, Text, Button ,Image, ScrollView, Pressable } from "react-native";
 
 function ContentScreen({ route, navigation }) {
 
@@ -9,7 +9,9 @@ function ContentScreen({ route, navigation }) {
         <SafeAreaView style={styles.background}>
             <ScrollView>
                 <Text style={styles.text}>Hello {name}</Text>
-                <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
+                <Pressable onPress={() => console.log("Content image pressed")}>
+                    <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
+                </Pressable>
                 <Button style={styles.button} title="Update" onPress={() => navigation.setParams({
                     name:"Updated Content User"
                 })}/>
