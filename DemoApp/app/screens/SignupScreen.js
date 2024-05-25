@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button, Image } from "react-native";
+import { SafeAreaView, Text, Button, Image, Pressable } from "react-native";
 
 function SignupScreen({ route, navigation }) {
 
@@ -8,7 +8,9 @@ function SignupScreen({ route, navigation }) {
     return(
         <SafeAreaView style={styles.background}>
             <Text style={styles.text}>Sign Up, {name}</Text>
-            <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
+            <Pressable onPress={() => console.log("Signup image pressed")}>
+                <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
+            </Pressable>
             <Button style={styles.button} title="Update" onPress={() => navigation.setParams({
                 name:"Updated User"
             })}/>
