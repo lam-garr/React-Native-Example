@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { View, Button, ScrollView, Image, Pressable, Text, Modal } from "react-native";
+import { View, Button, ScrollView, Image, Pressable, Text, Modal, StatusBar } from "react-native";
 
 function TestScreen() {
 
@@ -8,6 +8,7 @@ function TestScreen() {
 
     return(
         <View style={{flex:1, backgroundColor: "plum", padding: 60}}>
+            <StatusBar backgroundColor="white" barStyle="dark-content" hidden={false}/>
             <ScrollView>
                 <Pressable onPress={() => console.log("image was pressed")}>
                     <Image source={{uri: "https://picsum.photos/300"}} style={{width: 300, height: 300}}/>
