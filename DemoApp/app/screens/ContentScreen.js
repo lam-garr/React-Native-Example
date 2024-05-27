@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button ,Image, ScrollView, Pressable } from "react-native";
+import { SafeAreaView, Text, Button ,Image, ScrollView, Pressable, StatusBar } from "react-native";
 
 function ContentScreen({ route, navigation }) {
 
@@ -7,6 +7,7 @@ function ContentScreen({ route, navigation }) {
 
     return(
         <SafeAreaView style={styles.background}>
+            <StatusBar backgroundColor="white" barStyle="dark-content" hidden={true}/>
             <ScrollView>
                 <Text style={styles.text}>Hello {name}</Text>
                 <Pressable onPress={() => console.log("Content image pressed")}>
