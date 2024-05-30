@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button, ScrollView, Pressable } from "react-native";
+import { SafeAreaView, Text, Button, ScrollView, Pressable, ActivityIndicator } from "react-native";
 
 function AboutScreen({ route, navigation }) {
 
@@ -7,6 +7,7 @@ function AboutScreen({ route, navigation }) {
 
     return(
         <SafeAreaView style={styles.background}>
+            <ActivityIndicator size="medium" color="black" animating={true}/>
             <ScrollView>
                 <Pressable onPress={() => console.log("About test pressed")}>
                     <Text style={styles.text}>Hello {name}</Text>
