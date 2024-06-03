@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { View, Button, ScrollView, Image, Pressable, Text, Modal, StatusBar, ActivityIndicator } from "react-native";
+import { View, Button, ScrollView, Image, Pressable, Text, Modal, StatusBar, ActivityIndicator, Alert } from "react-native";
 
 function TestScreen() {
 
@@ -14,6 +14,21 @@ function TestScreen() {
                 <Pressable onPress={() => console.log("image was pressed")}>
                     <Image source={{uri: "https://picsum.photos/300"}} style={{width: 300, height: 300}}/>
                 </Pressable>
+                <Button
+                    title="alert"
+                    onPress={() => 
+                        Alert.alert("New Alert!", "test alert", [
+                            {
+                                text:"ok",
+                                onPress: () => console.log("ok pressed")
+                            },
+                            {
+                                text:"cancel",
+                                onPress: () => console.log("cancel pressed")
+                            }
+                        ])
+                    }
+                />
                 <Button
                     title="Press Test Button"
                     onPress={() => setModalIsVisible(true)}
