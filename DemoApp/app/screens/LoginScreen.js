@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button, Image, Pressable, ActivityIndicator } from "react-native";
+import { SafeAreaView, Text, Button, Image, Pressable, ActivityIndicator, Alert } from "react-native";
 
 function LoginScreen({ route, navigation }) {
 
@@ -8,6 +8,21 @@ function LoginScreen({ route, navigation }) {
     return(
         <SafeAreaView style={styles.background}>
             <ActivityIndicator size="medium" color="black" animating={true}/>
+            <Button
+                    title="login alert"
+                    onPress={() => 
+                        Alert.alert("Login Alert!", "login attempt", [
+                            {
+                                text:"ok",
+                                onPress: () => console.log("ok pressed")
+                            },
+                            {
+                                text:"cancel",
+                                onPress: () => console.log("cancel pressed")
+                            }
+                        ])
+                    }
+                />
             <Text style={styles.text}>Log In, {name}</Text>
             <Pressable onPress={() => console.log("Login image pressed")}>
                 <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
