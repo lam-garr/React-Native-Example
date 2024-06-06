@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button ,Image, ScrollView, Pressable, StatusBar, ActivityIndicator } from "react-native";
+import { SafeAreaView, Text, Button ,Image, ScrollView, Pressable, StatusBar, ActivityIndicator, Alert} from "react-native";
 
 function ContentScreen({ route, navigation }) {
 
@@ -9,6 +9,21 @@ function ContentScreen({ route, navigation }) {
         <SafeAreaView style={styles.background}>
             <StatusBar backgroundColor="white" barStyle="dark-content" hidden={true}/>
             <ActivityIndicator size="medium" color="black" animating={true}/>
+                <Button
+                    title="login alert"
+                    onPress={() => 
+                        Alert.alert("Content Alert!", "content attempt", [
+                            {
+                                text:"ok",
+                                onPress: () => console.log("ok pressed")
+                            },
+                            {
+                                text:"cancel",
+                                onPress: () => console.log("cancel pressed")
+                            }
+                        ])
+                    }
+                />
             <ScrollView>
                 <Text style={styles.text}>Hello {name}</Text>
                 <Pressable onPress={() => console.log("Content image pressed")}>
