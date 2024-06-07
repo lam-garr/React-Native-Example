@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button, Image, ScrollView, Pressable, ActivityIndicator } from "react-native";
+import { SafeAreaView, Text, Button, Image, ScrollView, Pressable, ActivityIndicator, Alert } from "react-native";
 
 function SupportScreen({ route, navigation }) {
 
@@ -9,6 +9,21 @@ function SupportScreen({ route, navigation }) {
         <SafeAreaView style={styles.background}>
             <ActivityIndicator size="medium" color="black" animating={true}/>
             <ScrollView>
+                <Button
+                    title="alert"
+                    onPress={() => 
+                        Alert.alert("Support Alert!", "support alert", [
+                            {
+                                text:"ok",
+                                onPress: () => console.log("ok pressed")
+                            },
+                            {
+                                text:"cancel",
+                                onPress: () => console.log("cancel pressed")
+                            }
+                        ])
+                    }
+                />
                 <Text style={styles.text}>Hello {name}</Text>
                 <Pressable onPress={() => console.log("Support Image Pressed")}>
                     <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
