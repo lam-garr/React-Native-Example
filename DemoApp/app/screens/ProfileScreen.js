@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button, Image, ScrollView, Pressable } from "react-native";
+import { SafeAreaView, Text, Button, Image, ScrollView, Pressable, Alert } from "react-native";
 
 function ProfileScreen({ route, navigation }) {
 
@@ -8,6 +8,21 @@ function ProfileScreen({ route, navigation }) {
     return(
         <SafeAreaView style={styles.background}>
             <ScrollView>
+                <Button
+                    title="alert"
+                    onPress={() => 
+                        Alert.alert("Profile Alert!", "profile alert", [
+                            {
+                                text:"ok",
+                                onPress: () => console.log("ok pressed")
+                            },
+                            {
+                                text:"cancel",
+                                onPress: () => console.log("cancel pressed")
+                            }
+                        ])
+                    }
+                />
                 <Text style={styles.text}>Hello {name}</Text>
                 <Pressable onPress={() => console.log("Profile image pressed")}>
                     <Image source={{uri: "https://picsum.photos/300"}} style={contentImage}/>
