@@ -1,5 +1,6 @@
 import React from "react";
 import { SafeAreaView, Text, Button, Image, ScrollView, Pressable, Alert } from "react-native";
+import GreetComponent from "../components/GreetingComponent";
 
 function ProfileScreen({ route, navigation }) {
 
@@ -7,6 +8,7 @@ function ProfileScreen({ route, navigation }) {
 
     return(
         <SafeAreaView style={styles.background}>
+            <GreetComponent name="Test User"/>
             <ScrollView>
                 <Button
                     title="alert"
