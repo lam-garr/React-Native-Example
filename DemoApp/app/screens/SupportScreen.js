@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button, Image, ScrollView, Pressable, ActivityIndicator, Alert } from "react-native";
+import { SafeAreaView, Text, Button, Image, ScrollView, Pressable, ActivityIndicator, Alert, StatusBar } from "react-native";
 
 function SupportScreen({ route, navigation }) {
 
@@ -7,6 +7,7 @@ function SupportScreen({ route, navigation }) {
 
     return(
         <SafeAreaView style={styles.background}>
+            <StatusBar backgroundColor="white" barStyle="dark-content" hidden={true}/>
             <ActivityIndicator size="medium" color="black" animating={true}/>
             <ScrollView>
                 <Button
