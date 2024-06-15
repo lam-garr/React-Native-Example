@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button, Image, Pressable, ActivityIndicator, Alert } from "react-native";
+import { SafeAreaView, Text, Button, Image, Pressable, ActivityIndicator, Alert, StatusBar } from "react-native";
 
 function LoginScreen({ route, navigation }) {
 
@@ -7,6 +7,7 @@ function LoginScreen({ route, navigation }) {
 
     return(
         <SafeAreaView style={styles.background}>
+            <StatusBar backgroundColor="white" barStyle="dark-content" hidden={true}/>
             <ActivityIndicator size="medium" color="black" animating={true}/>
             <Button
                     title="login alert"
