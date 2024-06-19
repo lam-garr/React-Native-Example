@@ -3,6 +3,11 @@ import { View, Text, StyleSheet } from "raect-native";
 export default function MultiStyleComponent() {
     return(
         <View style={styles.container}>
+            <View style={style.dark}>
+                <Text style={style.darkText}>
+                    style inheritance <Text style={style.boldedText}>bolded</Text>
+                </Text>
+            </View>
             <View style={[styles.box, styles.redColor, styles.boxShadow]}>
                 <Text>red box</Text>
             </View>
@@ -38,5 +43,14 @@ const styles = StyleSheet.create({
     },
     androidShadow: {
         elevation: 10
+    },
+    dark: {
+        backgroundColor: "black"
+    },
+    darkText: {
+        color: "white"
+    },
+    boldedText: {
+        fontWeight: "bold"
     }
 })
