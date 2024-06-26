@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: "column",
+        flexWrap: "nowrap",
         justifyContent: "flex-start",
         alignItems: "stretch",
         marginTop: 64,
