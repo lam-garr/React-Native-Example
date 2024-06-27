@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
         flexWrap: "nowrap",
         justifyContent: "flex-start",
         alignItems: "stretch",
+        alignContent: "flex-start",
         marginTop: 64,
         borderWidth: 6,
         borderColor: "red"
