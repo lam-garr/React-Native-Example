@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
         flexWrap: "nowrap",
+        gap: 10,
         justifyContent: "flex-start",
         alignItems: "stretch",
         alignContent: "flex-start",
