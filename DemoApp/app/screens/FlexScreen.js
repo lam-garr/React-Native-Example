@@ -6,9 +6,9 @@ export default function FlexScreen() {
         <View style={styles.container}>
             <BoxComponent style={{ backgroundColor: "pink", flex: 1, flexShrink: 1}}>Box 1</BoxComponent>
             <BoxComponent style={{ backgroundColor: "blue", flexBasis: 140, flex: 3}}>Box 2</BoxComponent>
-            <BoxComponent style={{ backgroundColor: "yellow", flex: 1}}>Box 3</BoxComponent>
+            <BoxComponent style={{ backgroundColor: "yellow", flex: 1, top: 75, left: 75}}>Box 3</BoxComponent>
             <BoxComponent style={{ backgroundColor: "green", alignItems: "flex-end", flexGrow: 1}}>Box 4</BoxComponent>
-            <BoxComponent style={{ backgroundColor: "brown", alignItems: "stretch"}}>Box 5</BoxComponent>
+            <BoxComponent style={{ backgroundColor: "brown", alignItems: "stretch", position: "absolute", top: 100, left: 100}}>Box 5</BoxComponent>
         </View>
     )
 }
