@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, SafeAreaView}  from "react-native";
+import { StyleSheet, View, Text, SafeAreaView, Platform }  from "react-native";
 
 export default function DynamicUIScreen() {
 
@@ -15,7 +15,7 @@ export default function DynamicUIScreen() {
                         height: windowHeight > 600 ? "60%" : "90%"
                     }
                     ]}>
-                    <Text style={{fontSize: windowWidth > 500 ? 50 : 24}}>Hello!</Text>
+                    <Text style={[styles.text, {fontSize: windowWidth > 500 ? 50 : 24}]}>Hello!</Text>
                 </View>
             </View>
         </SafeAreaView>
@@ -31,11 +31,23 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "plum",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        paddingTop: Platform.OS === "android" ? 25 : 0
     },
     box: {
         backgroundColor: "lightBlue",
         alignItems: "center",
         justifyContent: "center"
+    },
+    text: {
+        ...Platform.select({
+            ios: {
+                color: "purple",
+                fontStyle: "italic"
+            },
+            android: {
+                color: "blue"
+            }
+        })
     }
 })
