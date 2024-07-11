@@ -5,14 +5,14 @@ const CustomButton = ({ onPress, title }) => {
     <Pressable
         onPress={onPress}
         style={{
-            justifyContent: "cneter",
-            alignItems: "cneter",
+            justifyContent: "center",
+            alignItems: "center",
             backgroundColor: "lightblue",
             borderRadius: 20,
             padding: 10
         }}
     >
-        <Text>{title}</Text>
+        <Text style={{ color: "purple", fontSize: 18}}>{title}</Text>
     </Pressable>
 }
 
