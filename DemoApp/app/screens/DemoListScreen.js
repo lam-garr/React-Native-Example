@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, ScrollView, SafeAreaView, StatusBar } from "react-native";
+import { StyleSheet, View, Text, ScrollView, SafeAreaView, StatusBar, FlatList } from "react-native";
 
 export default function DemoListScreen() {
 
@@ -9,7 +9,7 @@ export default function DemoListScreen() {
 
     return(
         <SafeAreaView style={styles.container}>
-            <ScrollView style={style.scrollView}>
+            {/* <ScrollView style={style.scrollView}>
                 {sampleListData.map((item) => {
                     return (
                         <View style={styles.card} key={item.id}>
@@ -18,7 +18,21 @@ export default function DemoListScreen() {
                         </View>
                     )
                 })}
-            </ScrollView>
+            </ScrollView> */}
+            <View style={styles.ScrollView}>
+                <FlatList
+                    data={sampleListData}
+                    renderItem={( {item} ) => {
+                        return(
+                            <View style={styles.card} key={item.id}>
+                                <Text style={styles.cardText}>{item.firstName}</Text>
+                                <Text style={styles.cardText}>{item.lastName}</Text>
+                            </View>
+                        )
+                    }}
+                    keyExtractor={(item) => item.id.toString()}
+                />
+            </View>
         </SafeAreaView>
     )
 }
