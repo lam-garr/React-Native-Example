@@ -32,6 +32,7 @@ export default function DemoListScreen() {
                     }}
                     keyExtractor={(item) => item.id.toString()}
                     ItemSeparatorComponent={<View style={{height: 16}}/>}
+                    ListEmptyComponent={<Text>empty</Text>}
                 />
             </View>
         </SafeAreaView>
