@@ -33,6 +33,7 @@ export default function DemoListScreen() {
                     keyExtractor={(item) => item.id.toString()}
                     ItemSeparatorComponent={<View style={{height: 16}}/>}
                     ListEmptyComponent={<Text>empty</Text>}
+                    ListHeaderComponent={<Text style={styles.headerText}>User List</Text>}
                 />
             </View>
         </SafeAreaView>
@@ -57,5 +58,10 @@ const styles = StyleSheet.create({
     },
     cardText: {
         fontSize: 30
+    },
+    headerText: {
+        fontSize: 24,
+        textAlign: "center",
+        marginBottom: 12
     }
 })
