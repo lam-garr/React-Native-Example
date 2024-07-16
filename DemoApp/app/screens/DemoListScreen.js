@@ -34,6 +34,7 @@ export default function DemoListScreen() {
                     ItemSeparatorComponent={<View style={{height: 16}}/>}
                     ListEmptyComponent={<Text>empty</Text>}
                     ListHeaderComponent={<Text style={styles.headerText}>User List</Text>}
+                    ListFooterComponent={<Text style={styles.footerText}>End of List</Text>}
                 />
             </View>
         </SafeAreaView>
@@ -60,6 +61,11 @@ const styles = StyleSheet.create({
         fontSize: 30
     },
     headerText: {
+        fontSize: 24,
+        textAlign: "center",
+        marginBottom: 12
+    },
+    footerText: {
         fontSize: 24,
         textAlign: "center",
         marginBottom: 12
