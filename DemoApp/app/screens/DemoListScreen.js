@@ -1,6 +1,17 @@
-import { StyleSheet, View, Text, ScrollView, SafeAreaView, StatusBar, FlatList } from "react-native";
+import { StyleSheet, View, Text, ScrollView, SafeAreaView, StatusBar, FlatList, SectionList } from "react-native";
 
 export default function DemoListScreen() {
+
+    const sampleSectionData = [
+                            {
+                                "brand":"NIKE",
+                                "data":["Air Jordan", "Air Force", "Nike SB"]
+                            },
+                            {
+                                "brand":"ADIDAS",
+                                "data":["Samba", "Superstar", "Stan Smith"]
+                            }
+    ];
 
     const sampleListData = [ {id: 1, firstName: "John", lastName: "Cena"},
                              {id: 2, firstName: "Randy", lastName: "Orton"},
@@ -20,7 +31,7 @@ export default function DemoListScreen() {
                 })}
             </ScrollView> */}
             <View style={styles.ScrollView}>
-                <FlatList
+                {/* <FlatList
                     data={sampleListData}
                     renderItem={( {item} ) => {
                         return(
@@ -35,6 +46,21 @@ export default function DemoListScreen() {
                     ListEmptyComponent={<Text>empty</Text>}
                     ListHeaderComponent={<Text style={styles.headerText}>User List</Text>}
                     ListFooterComponent={<Text style={styles.footerText}>End of List</Text>}
+                /> */}
+                <SectionList
+                    sections={sampleSectionData}
+                    renderItem={({ item }) => {
+                        return(
+                            <View style={styles.card}>
+                                <Text style={styles.carText}>{item}</Text>
+                            </View>
+                        )
+                    }}
+                    renderSectionHeader={({ section }) => {
+                        <Text style={styles.sectionHeaderText}>{section.type}</Text>
+                    }}
+                    ItemSeparatorComponent={() => <View style={{ height: 16}}/>}
+                    SectionSeparatorComponent={() => <View style={{ height: 16}}/>}
                 />
             </View>
         </SafeAreaView>
@@ -69,5 +95,10 @@ const styles = StyleSheet.create({
         fontSize: 24,
         textAlign: "center",
         marginBottom: 12
+    },
+    sectionHeaderText: {
+        backgroundColor: "white",
+        fontSize: 24,
+        fontWeight: "bold"
     }
 })
