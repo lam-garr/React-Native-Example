@@ -1,9 +1,14 @@
 import { StyleSheet, View, SafeAreaView, TextInput } from "react-native";
+import { useState } from "react";
 
 export default function DemoFormScreen() {
+
+    const [ userInput, setUserInput ] = useState("");
+
     return (
         <SafeAreaView style={styles.container}>
-            <TextInput style={styles.input}/>
+            <TextInput style={styles.input} defaultValue={userInput} onChangeText={text => setUserInput(text)}/>
+            <Text style={styles.text}>Input: {userInput}</Text>
         </SafeAreaView>
     )
 }
@@ -20,5 +25,9 @@ const styles = StyleSheet.create({
         margin: 12,
         padding: 10,
         borderWidth: 1
+    },
+    text: {
+        fontSize: 30,
+        padding: 10
     }
 })
