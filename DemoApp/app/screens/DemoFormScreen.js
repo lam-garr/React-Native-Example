@@ -7,7 +7,12 @@ export default function DemoFormScreen() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <TextInput style={styles.input} defaultValue={userInput} onChangeText={text => setUserInput(text)}/>
+            <TextInput 
+                style={styles.input} 
+                defaultValue={userInput}
+                onChangeText={text => setUserInput(text)}
+                placeholder="input text here"
+            />
             <Text style={styles.text}>Input: {userInput}</Text>
         </SafeAreaView>
     )
