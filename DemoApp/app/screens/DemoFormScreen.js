@@ -12,6 +12,8 @@ export default function DemoFormScreen() {
                 defaultValue={userInput}
                 onChangeText={text => setUserInput(text)}
                 placeholder="input text here"
+                autoCorrect={false}
+                autoCapitalize="none"
             />
             <Text style={styles.text}>Input: {userInput}</Text>
         </SafeAreaView>
