@@ -14,6 +14,8 @@ export default function DemoFormScreen() {
                 placeholder="input text here"
                 autoCorrect={false}
                 autoCapitalize="none"
+                keyboardType="default"
+                secureTextEntry={false}
             />
             <Text style={styles.text}>Input: {userInput}</Text>
         </SafeAreaView>
