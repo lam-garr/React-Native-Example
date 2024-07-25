@@ -17,6 +17,11 @@ export default function DemoFormScreen() {
                 keyboardType="default"
                 secureTextEntry={false}
             />
+            <TextInput
+                style={[styles.input, styles.multilineText]}
+                placeholder="message"
+                multiline
+            />
             <Text style={styles.text}>Input: {userInput}</Text>
         </SafeAreaView>
     )
@@ -38,5 +43,9 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 30,
         padding: 10
+    },
+    multilineText: {
+        minHeight: 100,
+        textAlignVertical: "top"
     }
 })
