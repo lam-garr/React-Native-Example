@@ -1,4 +1,4 @@
-import { StyleSheet, View, SafeAreaView, TextInput } from "react-native";
+import { StyleSheet, View, SafeAreaView, TextInput, Switch } from "react-native";
 import { useState } from "react";
 
 export default function DemoFormScreen() {
@@ -23,6 +23,10 @@ export default function DemoFormScreen() {
                 multiline
             />
             <Text style={styles.text}>Input: {userInput}</Text>
+            <View style={styles.switchContainer}>
+                <Text style={styles.text}>Dark Mode</Text>
+                <Switch/>
+            </View>
         </SafeAreaView>
     )
 }
@@ -47,5 +51,11 @@ const styles = StyleSheet.create({
     multilineText: {
         minHeight: 100,
         textAlignVertical: "top"
+    },
+    switchContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        paddingHorizontal: 10
     }
 })
