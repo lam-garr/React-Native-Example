@@ -5,6 +5,8 @@ export default function DemoFormScreen() {
 
     const [ userInput, setUserInput ] = useState("");
 
+    const [ isDarkMode, setIsDarkMode ] = useState(false);
+
     return (
         <SafeAreaView style={styles.container}>
             <TextInput 
@@ -25,7 +27,12 @@ export default function DemoFormScreen() {
             <Text style={styles.text}>Input: {userInput}</Text>
             <View style={styles.switchContainer}>
                 <Text style={styles.text}>Dark Mode</Text>
-                <Switch/>
+                <Switch
+                    value={isDarkMode}
+                    onValueChange={() => setIsDarkMode((prevState) => !prevState)}
+                    trackColor={{ false: "grey", true: "green"}}
+                    thumbColor="pink"
+                />
             </View>
         </SafeAreaView>
     )
