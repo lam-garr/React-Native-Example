@@ -5,7 +5,10 @@ export default function LoginFormScreen() {
     return(
         <View style={styles.container}>
             <View style={styles.form}>
-
+                <Text style={styles.label}>Username</Text>
+                <TextInput style={styles.input} placeholder="Enter your  username" />
+                <Text style={styles=label}>Password</Text>
+                <TextInput style={styles.input} placeholder="Enter your password" secureTextEntry />
             </View>
         </View>
     )
@@ -30,5 +33,18 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 4,
         elevation: 5
+    },
+    label: {
+        fontSize: 16,
+        marginBottom: 5,
+        fontWeight: "bold"
+    },
+    input: {
+        height: 40,
+        borderColor: "#ddd",
+        borderWidth: 1,
+        marginBottom: 15,
+        padding: 10,
+        borderRadius: 5
     }
 })
