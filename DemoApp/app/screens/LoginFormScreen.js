@@ -2,11 +2,14 @@ import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { useState} from "react";
 
 export default function LoginFormScreen() {
+
+    const [username, setUsername] = useState("");
+
     return(
         <View style={styles.container}>
             <View style={styles.form}>
                 <Text style={styles.label}>Username</Text>
-                <TextInput style={styles.input} placeholder="Enter your  username" />
+                <TextInput style={styles.input} placeholder="Enter your  username" value={username} onChangeText={text => setUsername(text)}/>
                 <Text style={styles=label}>Password</Text>
                 <TextInput style={styles.input} placeholder="Enter your password" secureTextEntry />
             </View>
