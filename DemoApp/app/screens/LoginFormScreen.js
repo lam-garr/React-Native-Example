@@ -13,6 +13,7 @@ export default function LoginFormScreen() {
                 <TextInput style={styles.input} placeholder="Enter your  username" value={username} onChangeText={text => setUsername(text)}/>
                 <Text style={styles=label}>Password</Text>
                 <TextInput style={styles.input} placeholder="Enter your password" secureTextEntry value={password} onChangeText={pw => setPassword(pw)}/>
+                <Button title="Login" onPress={() => {}} />
             </View>
         </View>
     )
