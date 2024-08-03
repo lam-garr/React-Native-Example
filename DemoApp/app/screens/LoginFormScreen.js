@@ -1,4 +1,4 @@
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, StyleSheet, KeyboardAvoidingView, Platform } from "react-native";
 import { useState} from "react";
 
 export default function LoginFormScreen() {
@@ -7,7 +7,11 @@ export default function LoginFormScreen() {
     const [password, setPassword] = useState("");
 
     return(
-        <View style={styles.container}>
+        <KeyboardAvoidingView 
+            behavior="padding" 
+            keyboardVerticalOffset={Platform.OS === "ios" ? 100 : 0} 
+            style={styles.container}
+        >
             <View style={styles.form}>
                 <Text style={styles.label}>Username</Text>
                 <TextInput style={styles.input} placeholder="Enter your  username" value={username} onChangeText={text => setUsername(text)}/>
@@ -15,7 +19,7 @@ export default function LoginFormScreen() {
                 <TextInput style={styles.input} placeholder="Enter your password" secureTextEntry value={password} onChangeText={pw => setPassword(pw)}/>
                 <Button title="Login" onPress={() => {}} />
             </View>
-        </View>
+        </KeyboardAvoidingView>
     )
 }
 
