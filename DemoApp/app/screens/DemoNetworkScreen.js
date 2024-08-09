@@ -1,5 +1,5 @@
 import { StyleSheet, SafeAreaView, StatusBar } from "react-native";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function DemoNetworkScreen() {
 
@@ -10,6 +10,10 @@ export default function DemoNetworkScreen() {
         const data = await response.json();
         setDataList(data);
     }
+
+    useEffect(() => {
+        fetchData();
+    }, [])
 
     return(
         <SafeAreaView style={styles.container}>
