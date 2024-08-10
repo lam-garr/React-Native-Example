@@ -1,4 +1,4 @@
-import { StyleSheet, SafeAreaView, StatusBar } from "react-native";
+import { StyleSheet, SafeAreaView, StatusBar, View, FlatList, Text } from "react-native";
 import { useState, useEffect } from "react";
 
 export default function DemoNetworkScreen() {
@@ -17,6 +17,19 @@ export default function DemoNetworkScreen() {
 
     return(
         <SafeAreaView style={styles.container}>
+            <View style={styles.listContainer}>
+                <FlatList
+                    data={dataList}
+                    renderItem={({ item }) => {
+                        return(
+                            <View style={styles.card}>
+                                <Text style={styles.titleText}>{item.title}</Text>
+                                <Text style={styles.bodyText}>{item.body}</Text>
+                            </View>
+                        )
+                    }}
+                />
+            </View>
         </SafeAreaView>
     )
 }
@@ -26,5 +39,22 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#f5f5f5",
         paddingTop: StatusBar.currentHeight
+    },
+    listContainer: {
+        flex: 1,
+        paddingHorizontal: 16
+    },
+    card: {
+        backgroundColor: "white",
+        padding: 16,
+        borderRadius: 8,
+        borderWidth: 1
+    },
+    titleText: {
+        fontSize: 30
+    },
+    bodyText: {
+        fontSize: 24,
+        color: "666666"
     }
 })
