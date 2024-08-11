@@ -28,6 +28,7 @@ export default function DemoNetworkScreen() {
                             </View>
                         )
                     }}
+                    ListEmptyComponent={<Text>No Data Found</Text>}
                 />
             </View>
         </SafeAreaView>
