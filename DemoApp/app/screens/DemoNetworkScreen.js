@@ -28,6 +28,9 @@ export default function DemoNetworkScreen() {
                             </View>
                         )
                     }}
+                    ItemSeparatorComponent={() => {
+                        <View style={{ height: 16 }}/>
+                    }}
                     ListEmptyComponent={<Text>No Data Found</Text>}
                 />
             </View>
