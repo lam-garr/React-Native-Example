@@ -32,6 +32,7 @@ export default function DemoNetworkScreen() {
                         <View style={{ height: 16 }}/>
                     }}
                     ListEmptyComponent={<Text>No Data Found</Text>}
+                    ListHeaderComponent={<Text style={styles.headerText}>Data List</Text>}
                 />
             </View>
         </SafeAreaView>
@@ -60,5 +61,10 @@ const styles = StyleSheet.create({
     bodyText: {
         fontSize: 24,
         color: "666666"
+    },
+    headerText: {
+        fontSize: 12,
+        textAlign: "center",
+        marginTop: 12
     }
 })
