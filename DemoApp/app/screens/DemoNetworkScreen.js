@@ -19,7 +19,7 @@ export default function DemoNetworkScreen() {
 
     if(isLoading) {
         return(
-            <SafeAreaView>
+            <SafeAreaView style={styles.loadingContainer}>
                 <ActivityIndicator/>
                 <Text>Loading...</Text>
             </SafeAreaView>
@@ -83,5 +83,12 @@ const styles = StyleSheet.create({
         fontSize: 24,
         textAlign: "cetner",
         marginTop: 12
+    },
+    loadingContainer: {
+        flex: 1,
+        backgroundColor: "#F5F5F5",
+        paddingTop: StatusBar.currentHeight,
+        justifyContent: "center",
+        alignItems: "center"
     }
 })
