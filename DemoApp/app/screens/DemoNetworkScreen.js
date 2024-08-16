@@ -54,7 +54,7 @@ export default function DemoNetworkScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#f5f5f5",
+        backgroundColor: "#F5F5F5",
         paddingTop: StatusBar.currentHeight
     },
     listContainer: {
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     },
     footerText: {
         fontSize: 24,
-        textAlign: "cetner",
+        textAlign: "center",
         marginTop: 12
     },
     loadingContainer: {
