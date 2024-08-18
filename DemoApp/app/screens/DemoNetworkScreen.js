@@ -46,6 +46,8 @@ export default function DemoNetworkScreen() {
                     ListEmptyComponent={<Text>No Data Found</Text>}
                     ListHeaderComponent={<Text style={styles.headerText}>Data List</Text>}
                     ListFooterComponent={<Text style={styles.footerText}>End of Data</Text>}
+                    refreshing={refreshing}
+                    onRefresh={() => {}}
                 />
             </View>
         </SafeAreaView>
