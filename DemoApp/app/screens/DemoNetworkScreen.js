@@ -14,6 +14,12 @@ export default function DemoNetworkScreen() {
         setIsLoading(false);
     }
 
+    const handleRefresh = () => {
+        setRefreshing(true);
+        fetchData();
+        setRefreshing(false);
+    }
+
     useEffect(() => {
         fetchData();
     }, [])
@@ -47,7 +53,7 @@ export default function DemoNetworkScreen() {
                     ListHeaderComponent={<Text style={styles.headerText}>Data List</Text>}
                     ListFooterComponent={<Text style={styles.footerText}>End of Data</Text>}
                     refreshing={refreshing}
-                    onRefresh={() => {}}
+                    onRefresh={handleRefresh}
                 />
             </View>
         </SafeAreaView>
