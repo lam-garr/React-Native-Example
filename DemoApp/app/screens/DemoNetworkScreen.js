@@ -1,4 +1,4 @@
-import { StyleSheet, SafeAreaView, StatusBar, View, FlatList, Text, ActivityIndicator } from "react-native";
+import { StyleSheet, SafeAreaView, StatusBar, View, FlatList, Text, ActivityIndicator, Button } from "react-native";
 import { useState, useEffect } from "react";
 
 export default function DemoNetworkScreen() {
@@ -36,27 +36,30 @@ export default function DemoNetworkScreen() {
 
     return(
         <SafeAreaView style={styles.container}>
-            <View style={styles.listContainer}>
-                <FlatList
-                    data={dataList}
-                    renderItem={({ item }) => {
-                        return(
-                            <View style={styles.card}>
-                                <Text style={styles.titleText}>{item.title}</Text>
-                                <Text style={styles.bodyText}>{item.body}</Text>
-                            </View>
-                        )
-                    }}
-                    ItemSeparatorComponent={() => {
-                        <View style={{ height: 16 }}/>
-                    }}
-                    ListEmptyComponent={<Text>No Data Found</Text>}
-                    ListHeaderComponent={<Text style={styles.headerText}>Data List</Text>}
-                    ListFooterComponent={<Text style={styles.footerText}>End of Data</Text>}
-                    refreshing={refreshing}
-                    onRefresh={handleRefresh}
-                />
-            </View>
+            <>
+                <Button title={isPosting ? "Adding..." : "Add"} onPress={() => {}} disable={isPossting}/>
+                <View style={styles.listContainer}>
+                    <FlatList
+                        data={dataList}
+                        renderItem={({ item }) => {
+                            return(
+                                <View style={styles.card}>
+                                    <Text style={styles.titleText}>{item.title}</Text>
+                                    <Text style={styles.bodyText}>{item.body}</Text>
+                                </View>
+                            )
+                        }}
+                        ItemSeparatorComponent={() => {
+                            <View style={{ height: 16 }}/>
+                        }}
+                        ListEmptyComponent={<Text>No Data Found</Text>}
+                        ListHeaderComponent={<Text style={styles.headerText}>Data List</Text>}
+                        ListFooterComponent={<Text style={styles.footerText}>End of Data</Text>}
+                        refreshing={refreshing}
+                        onRefresh={handleRefresh}
+                    />
+                </View>
+            </>
         </SafeAreaView>
     )
 }
