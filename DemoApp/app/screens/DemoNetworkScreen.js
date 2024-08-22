@@ -6,6 +6,8 @@ export default function DemoNetworkScreen() {
     const [ dataList, setDataList ] = useState([])
     const [ isLoading, setIsLoading ] = useState(true);
     const [ refreshing, setRefreshing ] = useState(false);
+    const [ postTitle, setPostTitle ] = useState("");
+    const [ postBody, setPostBody ] = useState("");
     const [ isPosting, setIsPosting ] = useState(false);
 
     const fetchData = async (limit = 10) => {
