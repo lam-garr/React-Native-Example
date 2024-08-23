@@ -39,7 +39,11 @@ export default function DemoNetworkScreen() {
     return(
         <SafeAreaView style={styles.container}>
             <>
-                <Button title={isPosting ? "Adding..." : "Add"} onPress={() => {}} disable={isPossting}/>
+                <View>
+                    <TextInput placeholder="Post Title" value={postTitle} onChangeText={text => setPostTitle(text)}/>
+                    <TextInput placeholder="Post Body" value={postBody} onChangeText={text => setPostBody(text)}/>
+                    <Button title={isPosting ? "Adding..." : "Add"} onPress={() => {}} disable={isPossting}/>
+                </View>
                 <View style={styles.listContainer}>
                     <FlatList
                         data={dataList}
