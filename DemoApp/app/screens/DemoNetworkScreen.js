@@ -39,9 +39,9 @@ export default function DemoNetworkScreen() {
     return(
         <SafeAreaView style={styles.container}>
             <>
-                <View>
-                    <TextInput placeholder="Post Title" value={postTitle} onChangeText={text => setPostTitle(text)}/>
-                    <TextInput placeholder="Post Body" value={postBody} onChangeText={text => setPostBody(text)}/>
+                <View style={styles.inputContainer}>
+                    <TextInput style={styles.input} placeholder="Post Title" value={postTitle} onChangeText={text => setPostTitle(text)}/>
+                    <TextInput style={styles.input} placeholder="Post Body" value={postBody} onChangeText={text => setPostBody(text)}/>
                     <Button title={isPosting ? "Adding..." : "Add"} onPress={() => {}} disable={isPossting}/>
                 </View>
                 <View style={styles.listContainer}>
@@ -109,5 +109,20 @@ const styles = StyleSheet.create({
         paddingTop: StatusBar.currentHeight,
         justifyContent: "center",
         alignItems: "center"
+    },
+    inputContainer: {
+        backgroundColor: "white",
+        padding: 16,
+        borderRadius: 8,
+        borderWidth: 1,
+        margin: 16
+    },
+    input: {
+        height: 40,
+        borderColor: "gray",
+        borderWidth: 1,
+        marginBottom: 8,
+        padding: 8,
+        borderRadius: 8
     }
 })
