@@ -23,6 +23,12 @@ export default function DemoNetworkScreen() {
         setRefreshing(false);
     }
 
+    const addPost = async () => {
+        setIsPosting(true);
+        //
+        setIsPosting(false);
+    }
+
     useEffect(() => {
         fetchData();
     }, [])
@@ -42,7 +48,7 @@ export default function DemoNetworkScreen() {
                 <View style={styles.inputContainer}>
                     <TextInput style={styles.input} placeholder="Post Title" value={postTitle} onChangeText={text => setPostTitle(text)}/>
                     <TextInput style={styles.input} placeholder="Post Body" value={postBody} onChangeText={text => setPostBody(text)}/>
-                    <Button title={isPosting ? "Adding..." : "Add"} onPress={() => {}} disable={isPossting}/>
+                    <Button title={isPosting ? "Adding..." : "Add"} onPress={addPost} disable={isPossting}/>
                 </View>
                 <View style={styles.listContainer}>
                     <FlatList
