@@ -59,34 +59,40 @@ export default function DemoNetworkScreen() {
 
     return(
         <SafeAreaView style={styles.container}>
-            <>
-                <View style={styles.inputContainer}>
-                    <TextInput style={styles.input} placeholder="Post Title" value={postTitle} onChangeText={text => setPostTitle(text)}/>
-                    <TextInput style={styles.input} placeholder="Post Body" value={postBody} onChangeText={text => setPostBody(text)}/>
-                    <Button title={isPosting ? "Adding..." : "Add"} onPress={addPost} disable={isPossting}/>
+            {errors ? (
+                <View>
+                    <Text>{errors}</Text>
                 </View>
-                <View style={styles.listContainer}>
-                    <FlatList
-                        data={dataList}
-                        renderItem={({ item }) => {
-                            return(
-                                <View style={styles.card}>
-                                    <Text style={styles.titleText}>{item.title}</Text>
-                                    <Text style={styles.bodyText}>{item.body}</Text>
-                                </View>
-                            )
-                        }}
-                        ItemSeparatorComponent={() => {
-                            <View style={{ height: 16 }}/>
-                        }}
-                        ListEmptyComponent={<Text>No Data Found</Text>}
-                        ListHeaderComponent={<Text style={styles.headerText}>Data List</Text>}
-                        ListFooterComponent={<Text style={styles.footerText}>End of Data</Text>}
-                        refreshing={refreshing}
-                        onRefresh={handleRefresh}
-                    />
-                </View>
-            </>
+            ): (
+                <>
+                    <View style={styles.inputContainer}>
+                        <TextInput style={styles.input} placeholder="Post Title" value={postTitle} onChangeText={text => setPostTitle(text)}/>
+                        <TextInput style={styles.input} placeholder="Post Body" value={postBody} onChangeText={text => setPostBody(text)}/>
+                        <Button title={isPosting ? "Adding..." : "Add"} onPress={addPost} disable={isPossting}/>
+                    </View>
+                    <View style={styles.listContainer}>
+                        <FlatList
+                            data={dataList}
+                            renderItem={({ item }) => {
+                                return(
+                                    <View style={styles.card}>
+                                        <Text style={styles.titleText}>{item.title}</Text>
+                                        <Text style={styles.bodyText}>{item.body}</Text>
+                                    </View>
+                                )
+                            }}
+                            ItemSeparatorComponent={() => {
+                                <View style={{ height: 16 }}/>
+                            }}
+                            ListEmptyComponent={<Text>No Data Found</Text>}
+                            ListHeaderComponent={<Text style={styles.headerText}>Data List</Text>}
+                            ListFooterComponent={<Text style={styles.footerText}>End of Data</Text>}
+                            refreshing={refreshing}
+                            onRefresh={handleRefresh}
+                        />
+                    </View>
+                </>
+            )}
         </SafeAreaView>
     )
 }
