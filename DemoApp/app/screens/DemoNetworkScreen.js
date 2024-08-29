@@ -60,8 +60,8 @@ export default function DemoNetworkScreen() {
     return(
         <SafeAreaView style={styles.container}>
             {errors ? (
-                <View>
-                    <Text>{errors}</Text>
+                <View style={styles.errorContainer}>
+                    <Text style={styles.errorText}>{errors}</Text>
                 </View>
             ): (
                 <>
@@ -151,5 +151,18 @@ const styles = StyleSheet.create({
         marginBottom: 8,
         padding: 8,
         borderRadius: 8
+    },
+    errorContainer: {
+        backgroundColor: "#FFC0CB",
+        padding: 16,
+        borderRadius: 8,
+        borderWidth: 1,
+        margin: 16,
+        alignItems: "center"
+    },
+    errorText: {
+        color: "D8000C",
+        fontSize: 16,
+        textAlign: "center"
     }
 })
