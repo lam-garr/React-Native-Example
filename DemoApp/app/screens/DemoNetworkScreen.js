@@ -33,22 +33,27 @@ export default function DemoNetworkScreen() {
 
     const addPost = async () => {
         setIsPosting(true);
-        const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
-            method: "post",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                title: postTitle,
-                body: postBody  
-            })
-        });;
+        try {const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+                method: "post",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    title: postTitle,
+                    body: postBody  
+                })
+            });;
 
-        const newPost = await response.json();
-        setDataList([newPost, ...dataList]);
-        setPostTitle("");
-        setPostBody("");
-        setIsPosting(false);
+            const newPost = await response.json();
+            setDataList([newPost, ...dataList]);
+            setPostTitle("");
+            setPostBody("");
+            setIsPosting(false);
+            setErrors("");
+        } catch (error) {
+            console.error("Error adding new post:", error);
+            setErrors("Failed to add new post")
+        }
     }
 
     useEffect(() => {
