@@ -19,7 +19,7 @@ export default function DemoNetworkScreen() {
             setIsLoading(false);
             setErrors("");
         } catch (error) {
-            console.log("error fetching data", error);
+            console.error("Error fetching data:", error);
             setIsLoading(false);
             setErrors("Failed to fetch data list.")
         }
