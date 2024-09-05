@@ -5,6 +5,10 @@ const Stack = createNativeStackNavigator;
 
 export default function DemoNavigationScreen() {
     return(
-        <NavigationContainer></NavigationContainer>
+        <NavigationContainer>
+            <Stack.Navigator>
+                {/* <Stack.Screen/> */}
+            </Stack.Navigator>
+        </NavigationContainer>
     );
 }
