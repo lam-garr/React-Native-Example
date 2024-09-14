@@ -4,6 +4,7 @@ export default function AboutStackScreen() {
     return(
         <View style={styles.container}>
             <Text style={styles.text}>About Screen</Text>
+            <Button title="Go to Home" onPress={() => {}}/>
         </View>
     )
 }
