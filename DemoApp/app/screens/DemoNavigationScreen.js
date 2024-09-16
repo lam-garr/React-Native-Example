@@ -10,7 +10,7 @@ export default function DemoNavigationScreen() {
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen name="Home" component={HomeStackScreen}/>
-                <Stack.Screen name="About" component={AboutStackScreen}/>
+                <Stack.Screen name="About" component={AboutStackScreen} initialParams={{name: "Guest"}}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
