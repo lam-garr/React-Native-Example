@@ -6,7 +6,7 @@ export default function HomeStackScreen() {
     return(
         <View style={styles.container}>
             <Text style={styles.text}>Home Screen</Text>
-            <Button title="Go to About" onPress={() => navigation.navigate("About")}/>
+            <Button title="Go to About" onPress={() => navigation.navigate("About", {name: "User"})}/>
         </View>
     )
 }

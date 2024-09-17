@@ -1,9 +1,10 @@
 import { View, Text, StyleSheet } from "react-native";
 
-export default function AboutStackScreen({ navigation }) {
+export default function AboutStackScreen({ navigation, route }) {
+    const { name } = route.params;
     return(
         <View style={styles.container}>
-            <Text style={styles.text}>About Screen</Text>
+            <Text style={styles.text}>About Screen, Hello {name}</Text>
             <Button title="Go to Home" onPress={() => navigation.navigate("Home")}/>
         </View>
     )
