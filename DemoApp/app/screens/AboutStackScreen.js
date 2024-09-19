@@ -6,7 +6,7 @@ export default function AboutStackScreen({ navigation, route }) {
         <View style={styles.container}>
             <Text style={styles.text}>About Screen, Hello {name}</Text>
             <Button title="Go to Home" onPress={() => navigation.navigate("Home")}/>
-            <Button title="Update Name" onPress={()=>{}}/>
+            <Button title="Update Name" onPress={() => navigation.setParams({name: "Friend"})}/>
         </View>
     )
 }
