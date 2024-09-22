@@ -9,7 +9,13 @@ export default function DemoNavigationScreen() {
     return(
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen name="Home" component={HomeStackScreen}/>
+                <Stack.Screen
+                    name="Home"
+                    component={HomeStackScreen}
+                    options={{
+                        title: "Welcome"
+                    }}
+                />
                 <Stack.Screen name="About" component={AboutStackScreen} initialParams={{name: "Guest"}}/>
             </Stack.Navigator>
         </NavigationContainer>
