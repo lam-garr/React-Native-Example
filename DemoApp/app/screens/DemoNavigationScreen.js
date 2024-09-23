@@ -13,7 +13,12 @@ export default function DemoNavigationScreen() {
                     name="Home"
                     component={HomeStackScreen}
                     options={{
-                        title: "Welcome"
+                        title: "Welcome",
+                        headerStyle: {
+                            background: "grey"
+                        },
+                        headerTintColor: "#fff",
+                        headerTitleStyle: { fontWeight: "bold"}
                     }}
                 />
                 <Stack.Screen name="About" component={AboutStackScreen} initialParams={{name: "Guest"}}/>
