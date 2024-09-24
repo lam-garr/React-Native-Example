@@ -2,6 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeStackScreen from ".HomeStackScreen";
 import AboutStackScreen from ".AboutStackScreen";
+import { Pressable, Text } from "react-native";
 
 const Stack = createNativeStackNavigator;
 
@@ -18,7 +19,12 @@ export default function DemoNavigationScreen() {
                             background: "grey"
                         },
                         headerTintColor: "#fff",
-                        headerTitleStyle: { fontWeight: "bold"}
+                        headerTitleStyle: { fontWeight: "bold"},
+                        headerLeft: () => {
+                            <Pressable onPress={() => console.log("Menu Button Pressed.")}>
+                                <Text style={{ color: "white", fontSize: 16}}>Menu</Text>
+                            </Pressable>
+                        }
                     }}
                 />
                 <Stack.Screen name="About" component={AboutStackScreen} initialParams={{name: "Guest"}}/>
