@@ -24,6 +24,9 @@ export default function DemoNavigationScreen() {
                             <Pressable onPress={() => console.log("Menu Button Pressed.")}>
                                 <Text style={{ color: "white", fontSize: 16}}>Menu</Text>
                             </Pressable>
+                        },
+                        contentStyle: {
+                            backgroundColor: "e8e4f3"
                         }
                     }}
                 />
