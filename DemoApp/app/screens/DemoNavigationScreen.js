@@ -9,25 +9,26 @@ const Stack = createNativeStackNavigator;
 export default function DemoNavigationScreen() {
     return(
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Home">
+            <Stack.Navigator initialRouteName="Home" screenOptions={{
+                headerStyle: {
+                    background: "grey"
+                },
+                headerTintColor: "#fff",
+                headerTitleStyle: { fontWeight: "bold"},
+                headerLeft: () => {
+                    <Pressable onPress={() => console.log("Menu Button Pressed.")}>
+                        <Text style={{ color: "white", fontSize: 16}}>Menu</Text>
+                    </Pressable>
+                },
+                contentStyle: {
+                    backgroundColor: "e8e4f3"
+                }
+            }}>
                 <Stack.Screen
                     name="Home"
                     component={HomeStackScreen}
                     options={{
-                        title: "Welcome",
-                        headerStyle: {
-                            background: "grey"
-                        },
-                        headerTintColor: "#fff",
-                        headerTitleStyle: { fontWeight: "bold"},
-                        headerLeft: () => {
-                            <Pressable onPress={() => console.log("Menu Button Pressed.")}>
-                                <Text style={{ color: "white", fontSize: 16}}>Menu</Text>
-                            </Pressable>
-                        },
-                        contentStyle: {
-                            backgroundColor: "e8e4f3"
-                        }
+                        title: "Welcome",      
                     }}
                 />
                 <Stack.Screen name="About" component={AboutStackScreen} initialParams={{name: "Guest"}}/>
