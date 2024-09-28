@@ -31,7 +31,14 @@ export default function DemoNavigationScreen() {
                         title: "Welcome",      
                     }}
                 />
-                <Stack.Screen name="About" component={AboutStackScreen} initialParams={{name: "Guest"}}/>
+                <Stack.Screen 
+                    name="About" 
+                    component={AboutStackScreen} 
+                    initialParams={{name: "Guest"}}
+                    options={{
+                        title: "About",      
+                    }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );
