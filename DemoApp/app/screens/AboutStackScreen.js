@@ -1,7 +1,15 @@
 import { View, Text, StyleSheet, Button } from "react-native";
+import { useLayoutEffect } from "react";
 
 export default function AboutStackScreen({ navigation, route }) {
     const { name } = route.params;
+
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            title: name
+        });
+    }, [navigation, name]);
+
     return(
         <View style={styles.container}>
             <Text style={styles.text}>About Screen, Hello {name}</Text>

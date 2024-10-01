@@ -35,9 +35,9 @@ export default function DemoNavigationScreen() {
                     name="About" 
                     component={AboutStackScreen} 
                     initialParams={{name: "Guest"}}
-                    options={({ route }) => ({
+                    /* options={({ route }) => ({
                         title: route.params.name
-                    })}
+                    })} */
                 />
             </Stack.Navigator>
         </NavigationContainer>
