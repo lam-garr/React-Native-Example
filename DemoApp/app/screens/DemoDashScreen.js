@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Button } from "react-native";
 
-const DemoDashScreen = () => {
+const DemoDashScreen = ({ navigation }) => {
     return(
         <View style={styles.container}>
             <Text style={StyleSheet.text}>Dashboard</Text>
+            <Button title="Settings" onPress={() => navigation.jumpTo("settings")}/>
         </View>
     )
 }
