@@ -4,6 +4,7 @@ const DemoDashScreen = ({ navigation }) => {
     return(
         <View style={styles.container}>
             <Text style={StyleSheet.text}>Dashboard</Text>
+            <Button title="Toggle Menu" onPress={() => navigation.toggleDrawer()}/>
             <Button title="Settings" onPress={() => navigation.jumpTo("settings")}/>
         </View>
     )
