@@ -10,7 +10,13 @@ export default function DemoDrawerNavScreen(){
     return(
         <NavigationContainer>
             <Drawer.Navigator>
-                <Drawer.Screen name="Dashboard" component={DemoDashScreen}/>
+                <Drawer.Screen
+                    name="Dashboard"
+                    component={DemoDashScreen}
+                    options={{
+                        title: "My Dashboard"
+                    }}
+                />
                 <Drawer.Screen name="Setting" component={DemoSettingScreen}/>
             </Drawer.Navigator>
         </NavigationContainer>
