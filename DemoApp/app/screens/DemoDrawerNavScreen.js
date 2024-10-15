@@ -15,7 +15,8 @@ export default function DemoDrawerNavScreen(){
                     component={DemoDashScreen}
                     options={{
                         title: "My Dashboard",
-                        drawerLabel: "Dashboard"
+                        drawerLabel: "Dashboard",
+                        drawerActiveTintColor: "#333"
                     }}
                 />
                 <Drawer.Screen name="Setting" component={DemoSettingScreen}/>
