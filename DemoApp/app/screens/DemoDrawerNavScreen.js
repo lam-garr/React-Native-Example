@@ -27,7 +27,8 @@ export default function DemoDrawerNavScreen(){
                     name="Setting" 
                     component={DemoSettingScreen}
                     options={{
-                        title: "Settings"
+                        title: "Settings",
+                        drawerLabel: "Settings"
                     }}
                 />
             </Drawer.Navigator>
