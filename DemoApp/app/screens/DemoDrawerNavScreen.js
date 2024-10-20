@@ -28,7 +28,8 @@ export default function DemoDrawerNavScreen(){
                     component={DemoSettingScreen}
                     options={{
                         title: "Settings",
-                        drawerLabel: "Settings"
+                        drawerLabel: "Settings",
+                        drawerActiveTintColor: "#333",
                     }}
                 />
             </Drawer.Navigator>
