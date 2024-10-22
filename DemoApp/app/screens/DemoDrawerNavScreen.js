@@ -30,7 +30,10 @@ export default function DemoDrawerNavScreen(){
                         title: "Settings",
                         drawerLabel: "Settings",
                         drawerActiveTintColor: "#333",
-                        drawerActiveBackgroundColor: "lightblue"
+                        drawerActiveBackgroundColor: "lightblue",
+                        drawerContentStyle: {
+                            backgroundColor: "white"
+                        }
                     }}
                 />
             </Drawer.Navigator>
