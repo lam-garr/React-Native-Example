@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 const DemoProfileScreen = () => {
     return(
         <View style={styles.container}>
-            <Text style={StyleSheet.text}>Profiel</Text>
+            <Text style={StyleSheet.text}>Profile</Text>
         </View>
     )
 }
