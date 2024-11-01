@@ -9,7 +9,11 @@ const Tab = createBottomTabNavigator();
 export default function DemoTabNavScreen() {
     return(
         <NavigationContainer>
-            <Tab.Navigator>
+            <Tab.Navigator
+                screenOptions={{
+                    tabBarLabelPosition: "below-icon"
+                }}
+            >
                 <Tab.Screen name="Profile" component={DemoProfileScreen}/>
                 <Tab.Screen name="Catalog" component={DemoCatalogList}/>
                 <Tab.Screen name="Settings" component={DemoSettingScreen}/>
