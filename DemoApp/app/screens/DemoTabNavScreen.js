@@ -12,7 +12,8 @@ export default function DemoTabNavScreen() {
             <Tab.Navigator
                 screenOptions={{
                     tabBarLabelPosition: "below-icon",
-                    tabBarShowLabel: true
+                    tabBarShowLabel: true,
+                    tabBarActiveTintColor: "purple"
                 }}
             >
                 <Tab.Screen name="Profile" component={DemoProfileScreen}/>
