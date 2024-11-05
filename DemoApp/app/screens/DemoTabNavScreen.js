@@ -17,7 +17,9 @@ export default function DemoTabNavScreen() {
                     tabBarInactiveTintColor: "grey"
                 }}
             >
-                <Tab.Screen name="Profile" component={DemoProfileScreen}/>
+                <Tab.Screen name="Profile" component={DemoProfileScreen} options={{
+                    tabBarLabel: "My Profile"
+                }}/>
                 <Tab.Screen name="Catalog" component={DemoCatalogList}/>
                 <Tab.Screen name="Settings" component={DemoSettingScreen}/>
             </Tab.Navigator>
