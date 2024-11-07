@@ -22,7 +22,8 @@ export default function DemoTabNavScreen() {
                     tabBarLabel: "My Profile",
                     tabBarIcon: ({ color }) => {
                         <Ionicons name="person" size={20} color={color}/>
-                    }
+                    },
+                    tabBarBadge: 1
                 }}/>
                 <Tab.Screen name="Catalog" component={DemoCatalogList}/>
                 <Tab.Screen name="Settings" component={DemoSettingScreen}/>
