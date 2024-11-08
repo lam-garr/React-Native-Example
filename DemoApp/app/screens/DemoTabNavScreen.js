@@ -26,7 +26,9 @@ export default function DemoTabNavScreen() {
                     tabBarBadge: 1
                 }}/>
                 <Tab.Screen name="Catalog" component={DemoCatalogList}/>
-                <Tab.Screen name="Settings" component={DemoSettingScreen}/>
+                <Tab.Screen name="Settings" component={DemoSettingScreen} options={{
+                    tabBarLabel: "Settings"
+                }}/>
             </Tab.Navigator>
         </NavigationContainer>
     );
