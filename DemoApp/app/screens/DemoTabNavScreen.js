@@ -25,7 +25,9 @@ export default function DemoTabNavScreen() {
                     },
                     tabBarBadge: 1
                 }}/>
-                <Tab.Screen name="Catalog" component={DemoCatalogList}/>
+                <Tab.Screen name="Catalog" component={DemoCatalogList} options={{
+                    tabBarLabel: "Catalog"
+                }}/>
                 <Tab.Screen name="Settings" component={DemoSettingScreen} options={{
                     tabBarLabel: "Settings"
                 }}/>
