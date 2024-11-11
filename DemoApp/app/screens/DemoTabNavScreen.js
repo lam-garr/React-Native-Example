@@ -32,7 +32,10 @@ export default function DemoTabNavScreen() {
                     }
                 }}/>
                 <Tab.Screen name="Settings" component={DemoSettingScreen} options={{
-                    tabBarLabel: "Settings"
+                    tabBarLabel: "Settings",
+                    tabBarIcon: ({ color }) => {
+                        <Ionicons name="settings" size={20} color={color}/>
+                    }
                 }}/>
             </Tab.Navigator>
         </NavigationContainer>
