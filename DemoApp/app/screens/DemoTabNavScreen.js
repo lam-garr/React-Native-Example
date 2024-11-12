@@ -29,7 +29,8 @@ export default function DemoTabNavScreen() {
                     tabBarLabel: "Catalog",
                     tabBarIcon: ({ color }) => {
                         <Ionicons name="book-open" size={20} color={color}/>
-                    }
+                    },
+                    tabBarBadge: 1
                 }}/>
                 <Tab.Screen name="Settings" component={DemoSettingScreen} options={{
                     tabBarLabel: "Settings",
