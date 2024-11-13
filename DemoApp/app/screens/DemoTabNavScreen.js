@@ -36,7 +36,8 @@ export default function DemoTabNavScreen() {
                     tabBarLabel: "Settings",
                     tabBarIcon: ({ color }) => {
                         <Ionicons name="settings" size={20} color={color}/>
-                    }
+                    },
+                    tabBarBadge: null
                 }}/>
             </Tab.Navigator>
         </NavigationContainer>
