@@ -4,10 +4,14 @@ import DemoSettingScreen from "./DemoSettingScreen";
 import DemoProfileScreen from "./DemoProfileScreen";
 import DemoCatalogList from "./DemoCatalogListScreen";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { useState} from "react";
 
 const Tab = createBottomTabNavigator();
 
 export default function DemoTabNavScreen() {
+
+    const [ settingsBadge, setSettingsBadge ] = useState(0);
+
     return(
         <NavigationContainer>
             <Tab.Navigator
@@ -37,7 +41,7 @@ export default function DemoTabNavScreen() {
                     tabBarIcon: ({ color }) => {
                         <Ionicons name="settings" size={20} color={color}/>
                     },
-                    tabBarBadge: null
+                    tabBarBadge: settingsBadge > 0 ? settingsBadge : 0
                 }}/>
             </Tab.Navigator>
         </NavigationContainer>
