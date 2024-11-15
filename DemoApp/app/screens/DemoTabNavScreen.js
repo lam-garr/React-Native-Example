@@ -10,6 +10,7 @@ const Tab = createBottomTabNavigator();
 
 export default function DemoTabNavScreen() {
 
+    const [ profileBadge, setProfileBadge] = useState(1);
     const [ settingsBadge, setSettingsBadge ] = useState(0);
 
     return(
@@ -27,7 +28,7 @@ export default function DemoTabNavScreen() {
                     tabBarIcon: ({ color }) => {
                         <Ionicons name="person" size={20} color={color}/>
                     },
-                    tabBarBadge: 1
+                    tabBarBadge: profileBadge > 0 ? profileBadge : 0
                 }}/>
                 <Tab.Screen name="Catalog" component={DemoCatalogList} options={{
                     tabBarLabel: "Catalog",
