@@ -29,7 +29,7 @@ export default function DemoTabNavScreen() {
                     tabBarIcon: ({ color }) => {
                         <Ionicons name="person" size={20} color={color}/>
                     },
-                    tabBarBadge: profileBadge > 0 ? profileBadge : 0
+                    tabBarBadge: profileBadge > 0 ? profileBadge : null
                 }}/>
                 <Tab.Screen name="Catalog" component={DemoCatalogList} options={{
                     tabBarLabel: "Catalog",
@@ -43,7 +43,7 @@ export default function DemoTabNavScreen() {
                     tabBarIcon: ({ color }) => {
                         <Ionicons name="settings" size={20} color={color}/>
                     },
-                    tabBarBadge: settingsBadge > 0 ? settingsBadge : 0
+                    tabBarBadge: settingsBadge > 0 ? settingsBadge : null
                 }}/>
             </Tab.Navigator>
         </NavigationContainer>
