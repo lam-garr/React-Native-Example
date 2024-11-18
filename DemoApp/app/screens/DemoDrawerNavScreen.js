@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigation } from "@react-navigation/drawer";
 import DemoDashScreen from "./DemoDashScreen";
 import DemoSettingScreen from "./DemoSettingScreen";
+import DemoProfileScreen from "./DemoProfileScreen";
 
 const Drawer = createDrawerNavigation();
 
@@ -22,6 +23,10 @@ export default function DemoDrawerNavScreen(){
                             backgroundColor: "white"
                         }
                     }}
+                />
+                <Drawer.Screen
+                    name="Profile"
+                    component={DemoProfileScreen}
                 />
                 <Drawer.Screen 
                     name="Setting" 
