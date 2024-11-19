@@ -27,6 +27,9 @@ export default function DemoDrawerNavScreen(){
                 <Drawer.Screen
                     name="Profile"
                     component={DemoProfileScreen}
+                    options={{
+                        title: "Profile"
+                    }}
                 />
                 <Drawer.Screen 
                     name="Setting" 
