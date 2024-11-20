@@ -28,7 +28,8 @@ export default function DemoDrawerNavScreen(){
                     name="Profile"
                     component={DemoProfileScreen}
                     options={{
-                        title: "Profile"
+                        title: "Profile",
+                        drawerLabel: "Profile"
                     }}
                 />
                 <Drawer.Screen 
