@@ -29,7 +29,8 @@ export default function DemoDrawerNavScreen(){
                     component={DemoProfileScreen}
                     options={{
                         title: "Profile",
-                        drawerLabel: "Profile"
+                        drawerLabel: "Profile",
+                        drawerActiveTintColor: "#333"
                     }}
                 />
                 <Drawer.Screen 
