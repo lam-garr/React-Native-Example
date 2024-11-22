@@ -30,7 +30,8 @@ export default function DemoDrawerNavScreen(){
                     options={{
                         title: "Profile",
                         drawerLabel: "Profile",
-                        drawerActiveTintColor: "#333"
+                        drawerActiveTintColor: "#333",
+                        drawerActiveBackgroundColor: "lightblue"
                     }}
                 />
                 <Drawer.Screen 
