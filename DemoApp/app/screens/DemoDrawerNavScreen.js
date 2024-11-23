@@ -31,7 +31,10 @@ export default function DemoDrawerNavScreen(){
                         title: "Profile",
                         drawerLabel: "Profile",
                         drawerActiveTintColor: "#333",
-                        drawerActiveBackgroundColor: "lightblue"
+                        drawerActiveBackgroundColor: "lightblue",
+                        drawerContentStyle: {
+                            backgroundColor: "white"
+                        }
                     }}
                 />
                 <Drawer.Screen 
